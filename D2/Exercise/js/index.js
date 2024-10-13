@@ -24,15 +24,15 @@ document.querySelector("body").innerHTML=`
         Producto: ${PRODUCTOS[productoComprado].producto} (${PRODUCTOS[productoComprado].precio}$)
       </div>
       <div>
-        Talla: ${PRODUCTOS[productoComprado].talla}
+        Talla: ${PRODUCTOS[productoComprado].talla.toUpperCase()}
       </div> 
       <div>
         Descuento: ${descuento()}$
       </div>
       <div>
-        <strong> Total: ${precioTotal()}$ </strong>
+        <strong> Total: ${calcularDescuento()}$ </strong>
       </div>
-      <img src="img/${PRODUCTOS[productoComprado].imagen}" alt="PRODUCTO">
+      <img src="img/${PRODUCTOS[productoComprado].imagen}" alt="${PRODUCTOS[productoComprado][0]}">
     </section>
 `
 
@@ -41,7 +41,7 @@ function descuento(){
   return PRODUCTOS[productoComprado].precio * DESCUENTO;
 }
 
-function precioTotal(){
+function calcularDescuento(){
   precioDescuento = PRODUCTOS[productoComprado].precio * (1 - DESCUENTO);
   return precioDescuento
 }
