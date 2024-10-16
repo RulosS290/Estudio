@@ -1,0 +1,10 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+input, select, button{
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+select{
+    height: 22px;
+}
